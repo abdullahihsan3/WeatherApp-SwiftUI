@@ -31,4 +31,19 @@ class LocationManager : NSObject, ObservableObject, CLLocationManagerDelegate{
         print("Error Getting Location",error)
         isLoading = false
     }
+    func getCoordinates(from cityName: String) async throws -> CLLocationCoordinate2D {
+        let geocoder = CLGeocoder()
+
+        do {
+            let placemarks = try await geocoder.geocodeAddressString(cityName)
+            
+            if let location = placemarks.first?.location {
+                return location.coordinate
+            } else {
+                throw NSError(domain: "YourAppDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "No coordinates found for the city"])
+            }
+        } catch {
+            throw error
+        }
+    }
 }

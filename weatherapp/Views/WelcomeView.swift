@@ -10,30 +10,39 @@ import CoreLocationUI
 
 struct WelcomeView: View {
     @EnvironmentObject var locationManager : LocationManager
+    @State private var cityName: String = ""
+    var weatherManager = WeatherManager()
+    @State var weather : WeatherModel?
+    
     var body: some View {
-        VStack{
-            VStack(spacing: 20, content: {
-                Text("Welcome to the Weather App")
-                    .bold()
-                    .font(.title)
+        NavigationView {
+            VStack{
+                VStack(spacing: 20, content: {
+                    Text("Welcome to the Weather App")
+                        .bold()
+                        .font(.title)
+                    
+                    Text("Please share your current location to get the weather in your area")
+                        .padding()
+                })
+                .multilineTextAlignment(.center)
+                .padding()
                 
-                Text("Please share your current location to get the weather in your area")
-                    .padding()
-            })
-            .multilineTextAlignment(.center)
-            .padding()
-            
-            LocationButton(.shareCurrentLocation){
-                locationManager.requestLocation()
+                LocationButton(.shareCurrentLocation){
+                    locationManager.requestLocation()
+                }
+                .cornerRadius(30)
+                .symbolVariant(.fill)
+                .foregroundColor(.white)
+                
+                
             }
-            .cornerRadius(30)
-            .symbolVariant(.fill)
-            .foregroundColor(.white)
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
         }
-        .frame(maxWidth: .infinity,maxHeight: .infinity)
-        
+        .navigationViewStyle(.stack)
        
     }
+    
 
 }
 
