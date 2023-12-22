@@ -5,6 +5,9 @@ Introducing WeatherApp: Your iOS app to subscribe to get the weather of your cur
 ## Requirements
 SwiftUI & Swift
 
+## Demo Video
+https://github.com/abdullahihsan3/WeatherApp-SwiftUI/assets/109294768/75d96ae8-76e2-47a9-b1ea-aa5ff56795c9
+
 ## Architecture
 
 The app is built using the clean architecture pattern. Here's a brief overview of the different layers:
