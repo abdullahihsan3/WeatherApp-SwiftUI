@@ -9,7 +9,8 @@ SwiftUI & Swift
 https://github.com/abdullahihsan3/WeatherApp-SwiftUI/assets/109294768/75d96ae8-76e2-47a9-b1ea-aa5ff56795c9
 
 ## Screenshot
-![alt text](https://github.com/abdullahihsan3/WeatherApp-SwiftUI/issues/2#issue-2056228709)
+<img src="https://github.com/abdullahihsan3/WeatherApp-SwiftUI/assets/109294768/fa8d0a99-be2e-45b7-906f-25ff32f2a37c" width="350" title="Main Image">
+
 
 ## Architecture
 
