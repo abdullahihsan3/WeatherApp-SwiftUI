@@ -8,6 +8,9 @@ SwiftUI & Swift
 ## Demo Video
 https://github.com/abdullahihsan3/WeatherApp-SwiftUI/assets/109294768/75d96ae8-76e2-47a9-b1ea-aa5ff56795c9
 
+## Screenshot
+![alt text](https://github.com/abdullahihsan3/WeatherApp-SwiftUI/issues/2#issue-2056228709)
+
 ## Architecture
 
 The app is built using the clean architecture pattern. Here's a brief overview of the different layers:
